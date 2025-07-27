@@ -1,12 +1,1139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vans Warped Tour Long Beach 2025</title>
+    <title>Vans Warped Tour 2025 - Long Beach Sunday Schedule</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script defer data-domain="tomlawrence.github.io" src="https://analytics.felicity.gg/js/script.js"></script>
+    <style>
+        body {
+            background: #055E9A;
+            background: linear-gradient(180deg, #4286f4, #1a2849);
+            background: url('bg.png') center center / cover no-repeat;
+            min-height: 100vh;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 0.2);
+        }
+
+        .stage-pill {
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+        }
+
+        .stage-pill.active {
+            background: rgba(59, 130, 246, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+        }
+
+        .stage-pill:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-1px);
+        }
+
+        .schedule-row {
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+        }
+
+        .schedule-row:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(4px);
+        }
+
+        .expanded-content {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .search-bar {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .band-image {
+            background: linear-gradient(45deg, #374151, #6b7280);
+        }
+
+        .scroll-container {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
 </head>
-<body>
-    <h1>Vans Warped Tour Long Beach 2025</h1>
+
+<body class="font-sans">
+    <div class="min-h-screen">
+        <!-- Header -->
+        <header class="glass-effect sticky top-0 z-50 border-b border-white/20">
+            <div class="max-w-7xl mx-auto px-4 py-6">
+                <div class="text-center mb-6">
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-2 tracking-tight">
+                        VANS WARPED TOUR
+                    </h1>
+                    <p class="text-xl md:text-2xl text-blue-100 font-light">
+                        Long Beach • Sunday, July 27, 2025
+                    </p>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="max-w-md mx-auto">
+                    <div class="relative">
+                        <input type="text" id="searchInput" placeholder="Search for a band..."
+                            class="search-bar w-full px-4 py-3 pr-12 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        <i id="searchIcon"
+                            class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-blue-200"></i>
+                        <button id="clearSearchBtn"
+                            class="hidden absolute right-4 top-1/2 transform -translate-y-1/2 text-blue-200 hover:text-white transition-colors cursor-pointer">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stage Pills -->
+        <div class="max-w-7xl mx-auto px-4 py-6">
+            <div class="scroll-container overflow-x-auto pb-4">
+                <div class="flex space-x-3 min-w-max pt-[2px]">
+                    <button
+                        class="stage-pill active px-6 py-3 rounded-full text-white font-medium whitespace-nowrap border border-white/20"
+                        data-stage="vans-left">
+                        Vans Left Foot
+                    </button>
+                    <button
+                        class="stage-pill px-6 py-3 rounded-full text-white font-medium whitespace-nowrap border border-white/20"
+                        data-stage="vans-right">
+                        Vans Right Foot
+                    </button>
+                    <button
+                        class="stage-pill px-6 py-3 rounded-full text-white font-medium whitespace-nowrap border border-white/20"
+                        data-stage="ghost">
+                        Ghost Stage
+                    </button>
+                    <button
+                        class="stage-pill px-6 py-3 rounded-full text-white font-medium whitespace-nowrap border border-white/20"
+                        data-stage="beatbox">
+                        Beatbox Stage
+                    </button>
+                    <button
+                        class="stage-pill px-6 py-3 rounded-full text-white font-medium whitespace-nowrap border border-white/20"
+                        data-stage="shapiro">
+                        Shapiro Stage
+                    </button>
+                    <button
+                        class="stage-pill px-6 py-3 rounded-full text-white font-medium whitespace-nowrap border border-white/20"
+                        data-stage="octopus">
+                        Octopus Stage
+                    </button>
+                    <button
+                        class="stage-pill px-6 py-3 rounded-full text-white font-medium whitespace-nowrap border border-white/20"
+                        data-stage="rex">
+                        Rex Stage
+                    </button>
+                    <button
+                        class="stage-pill px-6 py-3 rounded-full text-white font-medium whitespace-nowrap border border-white/20"
+                        data-stage="pike">
+                        Pike Stage
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Schedule Tables -->
+        <div class="max-w-7xl mx-auto px-4 pb-12">
+            <div id="scheduleContainer">
+                <!-- Vans Left Foot Stage -->
+                <div class="stage-schedule glass-effect rounded-2xl p-6 mb-8 border border-white/20"
+                    data-stage="vans-left">
+                    <h2 class="text-3xl font-bold text-white mb-6 text-center">Vans Left Foot Stage</h2>
+                    <div class="overflow-hidden rounded-xl">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="bg-blue-600/30 text-white">
+                                    <th class="px-6 py-4 text-left font-semibold">Time</th>
+                                    <th class="px-6 py-4 text-left font-semibold">Artist</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-white/10">
+                                <tr class="schedule-row cursor-pointer" data-band="royal-the-serpent">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">11:53</td>
+                                    <td class="px-6 py-4 text-white font-medium">Royal & The Serpent</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="fever-333">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">12:54</td>
+                                    <td class="px-6 py-4 text-white font-medium">Fever 333</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="the-red-jumpsuit-apparatus">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">2:05</td>
+                                    <td class="px-6 py-4 text-white font-medium">The Red Jumpsuit Apparatus</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="dance-hall-crashers">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">3:31</td>
+                                    <td class="px-6 py-4 text-white font-medium">Dance Hall Crashers</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="the-interrupters">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">4:52</td>
+                                    <td class="px-6 py-4 text-white font-medium">The Interrupters</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="311">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">6:33</td>
+                                    <td class="px-6 py-4 text-white font-medium">311</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="falling-in-reverse">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">8:49</td>
+                                    <td class="px-6 py-4 text-white font-medium">Falling In Reverse</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Vans Right Foot Stage -->
+                <div class="stage-schedule glass-effect rounded-2xl p-6 mb-8 border border-white/20 hidden"
+                    data-stage="vans-right">
+                    <h2 class="text-3xl font-bold text-white mb-6 text-center">Vans Right Foot Stage</h2>
+                    <div class="overflow-hidden rounded-xl">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="bg-blue-600/30 text-white">
+                                    <th class="px-6 py-4 text-left font-semibold">Time</th>
+                                    <th class="px-6 py-4 text-left font-semibold">Artist</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-white/10">
+                                <tr class="schedule-row cursor-pointer" data-band="all-hype">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">11:30</td>
+                                    <td class="px-6 py-4 text-white font-medium">All Hype</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="honey-revenge">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">12:21</td>
+                                    <td class="px-6 py-4 text-white font-medium">Honey Revenge</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="we-the-kings">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">1:27</td>
+                                    <td class="px-6 py-4 text-white font-medium">We The Kings</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="boys-like-girls">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">2:48</td>
+                                    <td class="px-6 py-4 text-white font-medium">Boys Like Girls</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="bowling-for-soup">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">4:09</td>
+                                    <td class="px-6 py-4 text-white font-medium">Bowling For Soup</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="dropkick-murphys">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">5:40</td>
+                                    <td class="px-6 py-4 text-white font-medium">Dropkick Murphys</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="rise-against">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">7:36</td>
+                                    <td class="px-6 py-4 text-white font-medium">Rise Against</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Ghost Stage -->
+                <div class="stage-schedule glass-effect rounded-2xl p-6 mb-8 border border-white/20 hidden"
+                    data-stage="ghost">
+                    <h2 class="text-3xl font-bold text-white mb-6 text-center">Ghost Stage</h2>
+                    <div class="overflow-hidden rounded-xl">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="bg-blue-600/30 text-white">
+                                    <th class="px-6 py-4 text-left font-semibold">Time</th>
+                                    <th class="px-6 py-4 text-left font-semibold">Artist</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-white/10">
+                                <tr class="schedule-row cursor-pointer" data-band="magnolia-park">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">11:40</td>
+                                    <td class="px-6 py-4 text-white font-medium">Magnolia Park</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="millionaires">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">12:44</td>
+                                    <td class="px-6 py-4 text-white font-medium">Millionaire$</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="kim-dracula">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">1:48</td>
+                                    <td class="px-6 py-4 text-white font-medium">Kim Dracula</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="blessthefall">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">2:52</td>
+                                    <td class="px-6 py-4 text-white font-medium">Blessthefall</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="the-wonder-years">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">3:56</td>
+                                    <td class="px-6 py-4 text-white font-medium">The Wonder Years</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="anberlin">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">5:00</td>
+                                    <td class="px-6 py-4 text-white font-medium">Anberlin</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="atmosphere">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">6:04</td>
+                                    <td class="px-6 py-4 text-white font-medium">Atmosphere</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="of-mice-men">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">7:18</td>
+                                    <td class="px-6 py-4 text-white font-medium">Of Mice & Men</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="chiodos">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">8:37</td>
+                                    <td class="px-6 py-4 text-white font-medium">Chiodos</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Beatbox Stage -->
+                <div class="stage-schedule glass-effect rounded-2xl p-6 mb-8 border border-white/20 hidden"
+                    data-stage="beatbox">
+                    <h2 class="text-3xl font-bold text-white mb-6 text-center">Beatbox Stage</h2>
+                    <div class="overflow-hidden rounded-xl">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="bg-blue-600/30 text-white">
+                                    <th class="px-6 py-4 text-left font-semibold">Time</th>
+                                    <th class="px-6 py-4 text-left font-semibold">Artist</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-white/10">
+                                <tr class="schedule-row cursor-pointer" data-band="nothing-nowhere">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">12:12</td>
+                                    <td class="px-6 py-4 text-white font-medium">Nothing, Nowhere.</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="the-paradox">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">1:16</td>
+                                    <td class="px-6 py-4 text-white font-medium">The Paradox</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="miss-may-i">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">2:20</td>
+                                    <td class="px-6 py-4 text-white font-medium">Miss May I</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="from-ashes-to-new">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">3:24</td>
+                                    <td class="px-6 py-4 text-white font-medium">From Ashes to New</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="four-year-strong">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">4:28</td>
+                                    <td class="px-6 py-4 text-white font-medium">Four Year Strong</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="saosin">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">5:32</td>
+                                    <td class="px-6 py-4 text-white font-medium">Saosin</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="yung-gravy">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">6:41</td>
+                                    <td class="px-6 py-4 text-white font-medium">Yung Gravy</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="asking-alexandria">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">7:55</td>
+                                    <td class="px-6 py-4 text-white font-medium">Asking Alexandria</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="cobra-starship">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">9:19</td>
+                                    <td class="px-6 py-4 text-white font-medium">Cobra Starship</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Shapiro Stage -->
+                <div class="stage-schedule glass-effect rounded-2xl p-6 mb-8 border border-white/20 hidden"
+                    data-stage="shapiro">
+                    <h2 class="text-3xl font-bold text-white mb-6 text-center">Shapiro Stage</h2>
+                    <div class="overflow-hidden rounded-xl">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="bg-blue-600/30 text-white">
+                                    <th class="px-6 py-4 text-left font-semibold">Time</th>
+                                    <th class="px-6 py-4 text-left font-semibold">Artist</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-white/10">
+                                <tr class="schedule-row cursor-pointer" data-band="the-dark">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">12:30</td>
+                                    <td class="px-6 py-4 text-white font-medium">The Dark</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="ho99o9">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">1:30</td>
+                                    <td class="px-6 py-4 text-white font-medium">Ho99o9</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="lil-lotus">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">2:30</td>
+                                    <td class="px-6 py-4 text-white font-medium">Lil Lotus</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="stray-from-the-path">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">3:30</td>
+                                    <td class="px-6 py-4 text-white font-medium">Stray From The Path</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="sweet-pill">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">4:30</td>
+                                    <td class="px-6 py-4 text-white font-medium">Sweet Pill</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="scene-queen">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">5:35</td>
+                                    <td class="px-6 py-4 text-white font-medium">Scene Queen</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="point-north">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">6:50</td>
+                                    <td class="px-6 py-4 text-white font-medium">Point North</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="bryce-vine">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">8:00</td>
+                                    <td class="px-6 py-4 text-white font-medium">Bryce Vine</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="comeback-kid">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">9:20</td>
+                                    <td class="px-6 py-4 text-white font-medium">Comeback Kid</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Octopus Stage -->
+                <div class="stage-schedule glass-effect rounded-2xl p-6 mb-8 border border-white/20 hidden"
+                    data-stage="octopus">
+                    <h2 class="text-3xl font-bold text-white mb-6 text-center">Octopus Stage</h2>
+                    <div class="overflow-hidden rounded-xl">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="bg-blue-600/30 text-white">
+                                    <th class="px-6 py-4 text-left font-semibold">Time</th>
+                                    <th class="px-6 py-4 text-left font-semibold">Artist</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-white/10">
+                                <tr class="schedule-row cursor-pointer" data-band="the-barbarians-of-california">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">12:00</td>
+                                    <td class="px-6 py-4 text-white font-medium">The Barbarians of California</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="the-funeral-portrait">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">1:00</td>
+                                    <td class="px-6 py-4 text-white font-medium">The Funeral Portrait</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="oxymorrons">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">2:00</td>
+                                    <td class="px-6 py-4 text-white font-medium">Oxymorrons</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="vended">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">3:00</td>
+                                    <td class="px-6 py-4 text-white font-medium">Vended</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="chandler-leighton">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">4:00</td>
+                                    <td class="px-6 py-4 text-white font-medium">Chandler Leighton</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="destroy-boys">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">5:05</td>
+                                    <td class="px-6 py-4 text-white font-medium">Destroy Boys</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="drug-church">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">6:10</td>
+                                    <td class="px-6 py-4 text-white font-medium">Drug Church</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="iann-dior">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">7:25</td>
+                                    <td class="px-6 py-4 text-white font-medium">Iann Dior</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="the-home-team">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">8:40</td>
+                                    <td class="px-6 py-4 text-white font-medium">The Home Team</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Rex Stage -->
+                <div class="stage-schedule glass-effect rounded-2xl p-6 mb-8 border border-white/20 hidden"
+                    data-stage="rex">
+                    <h2 class="text-3xl font-bold text-white mb-6 text-center">Rex Stage</h2>
+                    <div class="overflow-hidden rounded-xl">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="bg-blue-600/30 text-white">
+                                    <th class="px-6 py-4 text-left font-semibold">Time</th>
+                                    <th class="px-6 py-4 text-left font-semibold">Artist</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-white/10">
+                                <tr class="schedule-row cursor-pointer" data-band="forever-came-calling">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">12:00</td>
+                                    <td class="px-6 py-4 text-white font-medium">Forever Came Calling</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="the-mainliners">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">1:00</td>
+                                    <td class="px-6 py-4 text-white font-medium">The Mainliners</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="garzi">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">2:00</td>
+                                    <td class="px-6 py-4 text-white font-medium">Garzi</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="slaughterhouse">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">3:00</td>
+                                    <td class="px-6 py-4 text-white font-medium">Slaughterhouse</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="haarper">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">4:00</td>
+                                    <td class="px-6 py-4 text-white font-medium">Haarper</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="cliffdiver">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">5:00</td>
+                                    <td class="px-6 py-4 text-white font-medium">Cliffdiver</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="worlds-first-cinema">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">6:00</td>
+                                    <td class="px-6 py-4 text-white font-medium">World's First Cinema</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="johnnie-guilbert">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">7:00</td>
+                                    <td class="px-6 py-4 text-white font-medium">Johnnie Guilbert</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="408">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">8:00</td>
+                                    <td class="px-6 py-4 text-white font-medium">408</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="treaty-oak-revival">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">9:00</td>
+                                    <td class="px-6 py-4 text-white font-medium">Treaty Oak Revival</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Pike Stage -->
+                <div class="stage-schedule glass-effect rounded-2xl p-6 mb-8 border border-white/20 hidden"
+                    data-stage="pike">
+                    <h2 class="text-3xl font-bold text-white mb-6 text-center">Pike Stage</h2>
+                    <div class="overflow-hidden rounded-xl">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="bg-blue-600/30 text-white">
+                                    <th class="px-6 py-4 text-left font-semibold">Time</th>
+                                    <th class="px-6 py-4 text-left font-semibold">Artist</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-white/10">
+                                <tr class="schedule-row cursor-pointer" data-band="indigo-forever">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">11:30</td>
+                                    <td class="px-6 py-4 text-white font-medium">Indigo Forever</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="screams-of-syrens">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">12:30</td>
+                                    <td class="px-6 py-4 text-white font-medium">Screams of Sirens</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="grave-secrets">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">1:30</td>
+                                    <td class="px-6 py-4 text-white font-medium">Grave Secrets</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="noelle-sucks">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">2:30</td>
+                                    <td class="px-6 py-4 text-white font-medium">Noelle Sucks</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="ekoh">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">3:30</td>
+                                    <td class="px-6 py-4 text-white font-medium">Ekoh</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="terror-reid">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">4:30</td>
+                                    <td class="px-6 py-4 text-white font-medium">Terror Reid</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="whiplash">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">5:30</td>
+                                    <td class="px-6 py-4 text-white font-medium">Whiplash</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="mgna-crrta">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">6:30</td>
+                                    <td class="px-6 py-4 text-white font-medium">MGNA Crrta</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="left-to-suffer">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">7:30</td>
+                                    <td class="px-6 py-4 text-white font-medium">Left to Suffer</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="6arelyhuman">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">8:30</td>
+                                    <td class="px-6 py-4 text-white font-medium">Barelyhuman</td>
+                                </tr>
+                                <tr class="schedule-row cursor-pointer" data-band="gogol-bordello">
+                                    <td class="px-6 py-4 text-blue-100 font-mono">9:30</td>
+                                    <td class="px-6 py-4 text-white font-medium">Gogol Bordello</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expanded Band Info Modal -->
+        <div id="bandModal"
+            class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden z-50 flex items-center justify-center p-4">
+            <div class="expanded-content max-w-2xl w-full rounded-2xl p-8 max-h-[90vh] overflow-y-auto">
+                <div class="flex justify-between items-start mb-6">
+                    <h3 id="bandName" class="text-3xl font-bold text-white"></h3>
+                    <button id="closeModal" class="text-white/70 hover:text-white text-2xl">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Genre Tags -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-white mb-3">Genres</h4>
+                        <div id="genreTags" class="flex flex-wrap gap-2">
+                            <!-- Genre pills will be inserted here -->
+                        </div>
+                    </div>
+
+                    <!-- Bio -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-white mb-3">About</h4>
+                        <p id="bandBio" class="text-blue-100 leading-relaxed"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Band data with bios and genres
+            const bandData = {
+                '311': {
+                    name: '311',
+                    genres: ['Alternative rock', 'Rap rock', 'Reggae rock', 'Funk rock'],
+                    bio: '311 is an American rock band from Omaha, blending alternative rock, reggae, hip-hop and funk into a genre-defying sound that has sustained them through decades of releases and live performances.'
+                },
+                '408': {
+                    name: '408',
+                    genres: ['Rap', 'Hip-hop'],
+                    bio: '408 is a hip-hop artist known for their energetic style and connection to California Bay Area rap culture, representing the 408 area code of San Jose.'
+                },
+                '6arelyhuman': {
+                    name: '6arelyhuman',
+                    genres: ['Digital hardcore', 'Breakcore', 'Electronic'],
+                    bio: '6arelyhuman is an electronic music producer creating aggressive, high-energy tracks that blend breakcore, digital hardcore, and experimental electronic elements.'
+                },
+                'anberlin': {
+                    name: 'Anberlin',
+                    genres: ['Alternative rock', 'Post-hardcore', 'Emo'],
+                    bio: 'Anberlin was an American alternative rock band from Winter Haven, Florida, known for their melodic post-hardcore sound and emotionally charged lyrics that gained them a devoted following throughout the 2000s and 2010s.'
+                },
+                'asking-alexandria': {
+                    name: 'Asking Alexandria',
+                    genres: ['Metalcore', 'Hard rock', 'Post-hardcore', 'Heavy metal'],
+                    bio: 'Asking Alexandria is a British rock band formed in Dubai and based in York, North Yorkshire. Known for their blend of metalcore and hard rock, they\'ve evolved from their early electronicore sound to become one of the leading acts in modern metal.'
+                },
+                'atmosphere': {
+                    name: 'Atmosphere',
+                    genres: ['Underground hip-hop', 'Alternative hip-hop', 'Conscious rap'],
+                    bio: 'Atmosphere is an American hip-hop duo from Minneapolis consisting of rapper Slug and producer Ant. They\'re pioneers of independent hip-hop, known for introspective lyrics and emotionally honest storytelling.'
+                },
+                'blessthefall': {
+                    name: 'Blessthefall',
+                    genres: ['Metalcore', 'Post-hardcore', 'Alternative metal'],
+                    bio: 'Blessthefall is an American metalcore band from Phoenix, Arizona, formed in 2004. They\'re known for their blend of heavy breakdowns, melodic choruses, and both clean and screamed vocals.'
+                },
+                'bowling-for-soup': {
+                    name: 'Bowling For Soup',
+                    genres: ['Pop punk', 'Alternative rock', 'Power pop'],
+                    bio: 'Bowling For Soup is an American pop punk band from Wichita Falls, Texas, known for their humorous lyrics, catchy melodies, and hit songs like "Girl All the Bad Guys Want" and "1985."'
+                },
+                'boys-like-girls': {
+                    name: 'Boys Like Girls',
+                    genres: ['Pop rock', 'Pop punk', 'Alternative rock'],
+                    bio: 'Boys Like Girls is an American pop rock band from Massachusetts, known for their anthemic choruses and emotionally driven songs that dominated the mid-2000s pop punk scene.'
+                },
+                'bryce-vine': {
+                    name: 'Bryce Vine',
+                    genres: ['Alternative hip-hop', 'Pop rap', 'Alternative rock'],
+                    bio: 'Bryce Vine is an American rapper and singer known for blending hip-hop with alternative rock elements, creating a unique sound that appeals to both rap and rock audiences.'
+                },
+                'chandler-leighton': {
+                    name: 'Chandler Leighton',
+                    genres: ['Pop punk', 'Alternative rock', 'Emo'],
+                    bio: 'Chandler Leighton is an emerging artist in the pop punk and alternative rock scene, known for emotionally charged vocals and relatable lyrics that resonate with younger audiences.'
+                },
+                'chiodos': {
+                    name: 'Chiodos',
+                    genres: ['Post-hardcore', 'Experimental rock', 'Progressive rock'],
+                    bio: 'Chiodos is an American post-hardcore band from Davison, Michigan, known for their theatrical and experimental approach to rock music, featuring complex arrangements and dramatic vocals.'
+                },
+                'cliffdiver': {
+                    name: 'Cliffdiver',
+                    genres: ['Pop punk', 'Emo', 'Alternative rock'],
+                    bio: 'Cliffdiver is a pop punk band known for their energetic sound and emotionally honest songwriting, representing the newer wave of emo and pop punk revival artists.'
+                },
+                'cobra-starship': {
+                    name: 'Cobra Starship',
+                    genres: ['Electropop', 'Dance-punk', 'Pop rock'],
+                    bio: 'Cobra Starship was an American dance-rock band from New York, known for their party anthems and electronic-infused rock sound that dominated the mid-2000s dance-punk scene.'
+                },
+                'comeback-kid': {
+                    name: 'Comeback Kid',
+                    genres: ['Hardcore punk', 'Melodic hardcore', 'Punk rock'],
+                    bio: 'Comeback Kid is a Canadian hardcore punk band from Winnipeg, Manitoba, known for their aggressive sound and socially conscious lyrics within the hardcore punk community.'
+                },
+                'dance-hall-crashers': {
+                    name: 'Dance Hall Crashers',
+                    genres: ['Ska punk', 'Third-wave ska', 'Punk rock'],
+                    bio: 'Dance Hall Crashers is an American ska punk band from Berkeley, California, known for their energetic live performances and contribution to the third-wave ska movement of the 1990s.'
+                },
+                'destroy-boys': {
+                    name: 'Destroy Boys',
+                    genres: ['Punk rock', 'Garage punk', 'Alternative rock'],
+                    bio: 'Destroy Boys is an American punk rock band from Sacramento, California, known for their raw energy, feminist themes, and authentic punk rock sound that captures the spirit of classic punk.'
+                },
+                'dropkick-murphys': {
+                    name: 'Dropkick Murphys',
+                    genres: ['Celtic punk', 'Punk rock', 'Folk punk'],
+                    bio: 'Dropkick Murphys is an American Celtic punk band from Quincy, Massachusetts, famous for blending traditional Irish folk music with punk rock, creating anthemic songs that celebrate working-class culture.'
+                },
+                'drug-church': {
+                    name: 'Drug Church',
+                    genres: ['Post-hardcore', 'Alternative rock', 'Indie rock'],
+                    bio: 'Drug Church is an American rock band from Albany, New York, known for their blend of post-hardcore and alternative rock with introspective lyrics and dynamic songwriting.'
+                },
+                'ekoh': {
+                    name: 'Ekoh',
+                    genres: ['Hip-hop', 'Alternative rap', 'Pop rap'],
+                    bio: 'Ekoh is an American rapper known for his versatile flow and ability to blend traditional hip-hop with alternative and pop elements, building a strong independent following.'
+                },
+                'falling-in-reverse': {
+                    name: 'Falling In Reverse',
+                    genres: ['Post-hardcore', 'Metalcore', 'Alternative metal', 'Rap rock'],
+                    bio: 'Falling In Reverse is an American rock band from Las Vegas, Nevada, led by vocalist Ronnie Radke. Known for their blend of post-hardcore, metalcore, and rap elements, creating a controversial but popular sound.'
+                },
+                'fever-333': {
+                    name: 'Fever 333',
+                    genres: ['Rap rock', 'Nu metal', 'Alternative metal', 'Hardcore punk'],
+                    bio: 'Fever 333 is an American rock band formed by Jason Aalon Butler, known for their politically charged lyrics and aggressive blend of rap, rock, and punk that addresses social justice issues.'
+                },
+                'forever-came-calling': {
+                    name: 'Forever Came Calling',
+                    genres: ['Pop punk', 'Melodic hardcore', 'Alternative rock'],
+                    bio: 'Forever Came Calling is a pop punk band known for their melodic approach to punk rock, combining catchy hooks with emotionally driven lyrics typical of the pop punk genre.'
+                },
+                'four-year-strong': {
+                    name: 'Four Year Strong',
+                    genres: ['Pop punk', 'Melodic hardcore', 'Alternative rock'],
+                    bio: 'Four Year Strong is an American pop punk band from Worcester, Massachusetts, known for their blend of pop punk and hardcore elements, creating energetic anthems for the scene.'
+                },
+                'from-ashes-to-new': {
+                    name: 'From Ashes to New',
+                    genres: ['Alternative metal', 'Nu metal', 'Rap rock'],
+                    bio: 'From Ashes to New is an American rock band known for combining heavy guitar riffs with rap vocals and melodic singing, representing the modern evolution of nu metal.'
+                },
+                'garzi': {
+                    name: 'Garzi',
+                    genres: ['Hip-hop', 'Rap', 'Alternative rap'],
+                    bio: 'Garzi is a hip-hop artist known for their unique style and contribution to the independent rap scene, building a following through authentic lyricism and distinctive flow.'
+                },
+                'gogol-bordello': {
+                    name: 'Gogol Bordello',
+                    genres: ['Gypsy punk', 'Folk punk', 'Alternative rock'],
+                    bio: 'Gogol Bordello is a punk band known for their theatrical stage shows and fusion of punk rock with traditional Eastern European folk music, creating a unique "gypsy punk" sound.'
+                },
+                'grave-secrets': {
+                    name: 'Grave Secrets',
+                    genres: ['Metalcore', 'Post-hardcore', 'Alternative metal'],
+                    bio: 'Grave Secrets is a metalcore band known for their heavy sound and emotionally intense lyrics, representing the contemporary metalcore scene with both aggression and melody.'
+                },
+                'haarper': {
+                    name: 'Haarper',
+                    genres: ['Dark trap', 'Industrial hip-hop', 'Alternative rap'],
+                    bio: 'Haarper is known for creating dark, industrial-influenced hip-hop that blends aggressive rap with heavy, atmospheric production and gothic aesthetics.'
+                },
+                'ho99o9': {
+                    name: 'Ho99o9',
+                    genres: ['Death rap', 'Punk rap', 'Industrial hip-hop'],
+                    bio: 'Ho99o9 is an American rap punk duo known for their aggressive fusion of hardcore punk and hip-hop, creating a chaotic and energetic sound they call "death rap."'
+                },
+                'honey-revenge': {
+                    name: 'Honey Revenge',
+                    genres: ['Pop punk', 'Alternative rock', 'Emo'],
+                    bio: 'Honey Revenge is a pop punk band known for their catchy melodies and emotionally driven songwriting, representing the newer generation of pop punk and emo revival artists.'
+                },
+                'iann-dior': {
+                    name: 'iann dior',
+                    genres: ['Alternative hip-hop', 'Pop rap', 'Trap rock'],
+                    bio: 'iann dior is a multi-platinum singer/songwriter who first gained fame via SoundCloud; his genre-blending fusion of alternative rock, trap, and rap has earned him chart success and a massive following worldwide.'
+                },
+                'indigo-forever': {
+                    name: 'Indigo Forever',
+                    genres: ['Alternative rock', 'Indie rock', 'Shoegaze'],
+                    bio: 'Indigo Forever is known for their atmospheric alternative rock sound, blending indie rock sensibilities with shoegaze influences to create dreamy, textured music.'
+                },
+                'johnnie-guilbert': {
+                    name: 'Johnnie Guilbert',
+                    genres: ['Alternative rock', 'Emo', 'Pop punk'],
+                    bio: 'Johnnie Guilbert is a musician and content creator known for his emo-influenced alternative rock music and his presence in the online alternative music community.'
+                },
+                'kim-dracula': {
+                    name: 'Kim Dracula',
+                    genres: ['Nu metal', 'Alternative metal', 'Experimental rock'],
+                    bio: 'Kim Dracula is an Australian artist known for their genre-bending approach to metal and rock, incorporating elements of nu metal, trap, and experimental music into their sound.'
+                },
+                'left-to-suffer': {
+                    name: 'Left To Suffer',
+                    genres: ['Deathcore', 'Metalcore', 'Nu metal'],
+                    bio: 'Left To Suffer is a heavy band known for their brutal blend of deathcore and metalcore with nu metal influences, creating an aggressive and modern heavy sound.'
+                },
+                'lil-lotus': {
+                    name: 'Lil Lotus',
+                    genres: ['Emo rap', 'Alternative hip-hop', 'Trap'],
+                    bio: 'Lil Lotus is known for blending emo and alternative rock influences with hip-hop, creating emotional rap music that appeals to both rap and rock audiences.'
+                },
+                'magnolia-park': {
+                    name: 'Magnolia Park',
+                    genres: ['Pop punk', 'Alternative rock', 'Rap rock'],
+                    bio: 'Magnolia Park is a band known for their modern take on pop punk, incorporating rap elements and contemporary production while maintaining the genre\'s energetic spirit.'
+                },
+                'mgna-crrta': {
+                    name: 'MGNA Crrrta',
+                    genres: ['Industrial', 'Electronic', 'Experimental'],
+                    bio: 'MGNA Crrrta is an experimental electronic artist known for creating dark, industrial soundscapes that blend aggressive electronic production with avant-garde elements.'
+                },
+                'millionaires': {
+                    name: 'Millionaire$',
+                    genres: ['Electropop', 'Dance-punk', 'Electronic rock'],
+                    bio: 'Millionaire$ is known for their party-focused electropop sound, blending electronic music with punk energy to create dance-friendly rock anthems.'
+                },
+                'miss-may-i': {
+                    name: 'Miss May I',
+                    genres: ['Metalcore', 'Melodic metalcore', 'Post-hardcore'],
+                    bio: 'Miss May I is an American metalcore band from Troy, Ohio, known for their blend of heavy metalcore with melodic elements and both clean and screamed vocals.'
+                },
+                'noelle-sucks': {
+                    name: 'Noelle Sucks',
+                    genres: ['Pop punk', 'Alternative rock', 'Emo'],
+                    bio: 'Noelle Sucks is known for their emotionally driven pop punk sound, representing the DIY ethos and authentic expression typical of the contemporary emo and pop punk scene.'
+                },
+                'nothing-nowhere': {
+                    name: 'Nothing, Nowhere',
+                    genres: ['Emo rap', 'Alternative hip-hop', 'Emo'],
+                    bio: 'Nothing, Nowhere is the project of Joe Mulherin, known for pioneering the emo rap genre by blending hip-hop production with emo and alternative rock influences.'
+                },
+                'of-mice-men': {
+                    name: 'Of Mice & Men',
+                    genres: ['Metalcore', 'Post-hardcore', 'Alternative metal'],
+                    bio: 'Of Mice & Men is an American metalcore band known for their heavy sound that combines metalcore aggression with melodic elements and both clean and harsh vocals.'
+                },
+                'oxymorrons': {
+                    name: 'Oxymorrons',
+                    genres: ['Rap rock', 'Alternative hip-hop', 'Funk rock'],
+                    bio: 'Oxymorrons is a band known for their fusion of rap, rock, and funk elements, creating a high-energy sound that blends multiple genres into party-ready anthems.'
+                },
+                'point-north': {
+                    name: 'Point North',
+                    genres: ['Pop punk', 'Alternative rock', 'Post-hardcore'],
+                    bio: 'Point North is known for their modern approach to pop punk and alternative rock, combining catchy melodies with heavier elements and emotionally resonant lyrics.'
+                },
+                'rise-against': {
+                    name: 'Rise Against',
+                    genres: ['Punk rock', 'Melodic hardcore', 'Hardcore punk'],
+                    bio: 'Rise Against is a Chicago-based punk band formed in 1999, known for their high-energy performances and socially conscious lyrics addressing political injustice, animal rights, and humanitarianism.'
+                },
+                'royal-the-serpent': {
+                    name: 'Royal & The Serpent',
+                    genres: ['Alternative pop', 'Electropop', 'Alternative rock'],
+                    bio: 'Royal & The Serpent is known for their dark, electronic-influenced alternative pop that blends moody aesthetics with catchy melodies and introspective lyrics.'
+                },
+                'saosin': {
+                    name: 'Saosin',
+                    genres: ['Post-hardcore', 'Alternative rock', 'Emo'],
+                    bio: 'Saosin is an American post-hardcore band from Orange County, California, known for their melodic approach to post-hardcore and their influence on the mid-2000s scene.'
+                },
+                'scene-queen': {
+                    name: 'Scene Queen',
+                    genres: ['Metalcore', 'Nu metal', 'Alternative metal'],
+                    bio: 'Scene Queen is known for their theatrical approach to metalcore, combining heavy music with colorful aesthetics and empowering messages, representing a new wave of alternative metal.'
+                },
+                'screams-of-syrens': {
+                    name: 'Screams Of Syrens',
+                    genres: ['Metalcore', 'Post-hardcore', 'Alternative metal'],
+                    bio: 'Screams Of Syrens is known for their heavy metalcore sound with melodic elements, representing the contemporary metalcore scene with both aggression and emotional depth.'
+                },
+                'slaughterhouse': {
+                    name: 'Slaughterhouse',
+                    genres: ['Hip-hop', 'Rap', 'Hardcore hip-hop'],
+                    bio: 'Slaughterhouse was an American hip-hop supergroup consisting of rappers Joe Budden, Joell Ortiz, Crooked I, and Royce da 5\'9", known for their lyrical prowess and hardcore rap style.'
+                },
+                'stray-from-the-path': {
+                    name: 'Stray From The Path',
+                    genres: ['Hardcore punk', 'Metalcore', 'Political hardcore'],
+                    bio: 'Stray From The Path is an American hardcore band known for their politically charged lyrics and aggressive sound that combines hardcore punk with metalcore elements.'
+                },
+                'sweet-pill': {
+                    name: 'Sweet Pill',
+                    genres: ['Shoegaze', 'Alternative rock', 'Indie rock'],
+                    bio: 'Sweet Pill is known for their dreamy shoegaze and alternative rock sound, creating atmospheric music that blends melodic vocals with textured guitar work.'
+                },
+                'terror-reid': {
+                    name: 'Terror Reid',
+                    genres: ['Hip-hop', 'Alternative rap', 'Trap'],
+                    bio: 'Terror Reid is the rap alter ego of Getter, known for aggressive hip-hop that blends trap production with alternative and electronic influences.'
+                },
+                'the-barbarians-of-california': {
+                    name: 'The Barbarians Of California',
+                    genres: ['Punk rock', 'Garage punk', 'Alternative rock'],
+                    bio: 'The Barbarians Of California is known for their raw punk rock sound that captures the rebellious spirit of California punk with garage rock influences.'
+                },
+                'the-dark': {
+                    name: 'The Dark',
+                    genres: ['Gothic rock', 'Alternative rock', 'Post-punk'],
+                    bio: 'The Dark is known for their gothic and alternative rock sound, creating atmospheric music with dark themes and moody aesthetics typical of gothic rock.'
+                },
+                'the-funeral-portrait': {
+                    name: 'The Funeral Portrait',
+                    genres: ['Metalcore', 'Post-hardcore', 'Alternative metal'],
+                    bio: 'The Funeral Portrait is known for their blend of metalcore and post-hardcore with theatrical elements, creating dramatic and emotionally intense music.'
+                },
+                'the-home-team': {
+                    name: 'The Home Team',
+                    genres: ['Pop punk', 'Alternative rock', 'Emo'],
+                    bio: 'The Home Team is known for their energetic pop punk sound with alternative rock influences, creating catchy and emotionally driven music for the contemporary pop punk scene.'
+                },
+                'the-interrupters': {
+                    name: 'The Interrupters',
+                    genres: ['Ska punk', 'Punk rock', 'Two-tone ska'],
+                    bio: 'The Interrupters is an American ska punk band known for their energetic blend of punk rock and ska, carrying on the tradition of two-tone ska with modern punk energy.'
+                },
+                'the-mainliners': {
+                    name: 'The Mainliners',
+                    genres: ['Punk rock', 'Garage punk', 'Alternative rock'],
+                    bio: 'The Mainliners is known for their straightforward punk rock approach, delivering high-energy music with garage punk influences and authentic punk attitude.'
+                },
+                'the-paradox': {
+                    name: 'The Paradox',
+                    genres: ['Alternative rock', 'Post-hardcore', 'Progressive rock'],
+                    bio: 'The Paradox is known for their complex alternative rock sound that incorporates post-hardcore and progressive elements, creating intricate and emotionally dynamic music.'
+                },
+                'the-red-jumpsuit-apparatus': {
+                    name: 'The Red Jumpsuit Apparatus',
+                    genres: ['Post-hardcore', 'Alternative rock', 'Emo'],
+                    bio: 'The Red Jumpsuit Apparatus is an American post-hardcore band from Middleburg, Florida, known for their emotionally charged songs and blend of post-hardcore with alternative rock elements.'
+                },
+                'the-wonder-years': {
+                    name: 'The Wonder Years',
+                    genres: ['Pop punk', 'Alternative rock', 'Emo'],
+                    bio: 'The Wonder Years is an American pop punk band from Lansdale, Pennsylvania, known for their introspective lyrics, emotional depth, and evolution of the pop punk sound into more mature territory.'
+                },
+                'treaty-oak-revival': {
+                    name: 'Treaty Oak Revival',
+                    genres: ['Country rock', 'Alternative country', 'Folk rock'],
+                    bio: 'Treaty Oak Revival is known for their blend of country rock and alternative country, creating music that combines traditional country elements with rock energy and modern production.'
+                },
+                'vended': {
+                    name: 'Vended',
+                    genres: ['Nu metal', 'Alternative metal', 'Heavy metal'],
+                    bio: 'Vended is an American heavy metal band formed by sons of Slipknot members, known for their aggressive nu metal sound that carries on the legacy of heavy, mask-wearing metal performance.'
+                },
+                'we-the-kings': {
+                    name: 'We The Kings',
+                    genres: ['Pop punk', 'Pop rock', 'Alternative rock'],
+                    bio: 'We The Kings is an American pop punk band from Bradenton, Florida, known for their catchy pop punk anthems and contribution to the mid-2000s pop punk scene.'
+                },
+                'whiplash': {
+                    name: 'Whiplash',
+                    genres: ['Thrash metal', 'Speed metal', 'Heavy metal'],
+                    bio: 'Whiplash is known for their aggressive thrash metal sound, delivering high-speed metal with technical precision and intense energy typical of classic thrash metal.'
+                },
+                'worlds-first-cinema': {
+                    name: 'World\'s First Cinema',
+                    genres: ['Post-hardcore', 'Alternative rock', 'Experimental rock'],
+                    bio: 'World\'s First Cinema is known for their cinematic approach to post-hardcore and alternative rock, creating atmospheric and emotionally complex music with experimental elements.'
+                },
+                'yung-gravy': {
+                    name: 'Yung Gravy',
+                    genres: ['Hip-hop', 'Comedy rap', 'Trap'],
+                    bio: 'Yung Gravy is an American rapper known for his humorous lyrics, retro-influenced hip-hop production, and viral internet presence that combines comedy with catchy trap beats.'
+                }
+            };
+
+            // Stage switching functionality
+            document.querySelectorAll('.stage-pill').forEach(pill => {
+                pill.addEventListener('click', function () {
+                    // Remove active class from all pills
+                    document.querySelectorAll('.stage-pill').forEach(p => p.classList.remove('active'));
+
+                    // Add active class to clicked pill
+                    this.classList.add('active');
+
+                    // Hide all stages
+                    document.querySelectorAll('.stage-schedule').forEach(stage => {
+                        stage.classList.add('hidden');
+                    });
+
+                    // Show selected stage
+                    const selectedStage = this.dataset.stage;
+                    const targetStage = document.querySelector(`.stage-schedule[data-stage="${selectedStage}"]`);
+                    if (targetStage) {
+                        targetStage.classList.remove('hidden');
+                        // Also reset any search filtering on rows
+                        targetStage.querySelectorAll('.schedule-row').forEach(row => {
+                            row.style.display = '';
+                        });
+                    }
+
+                    // Clear search input when switching stages manually
+                    document.getElementById('searchInput').value = '';
+                });
+            });
+
+            // Search functionality
+            const searchInput = document.getElementById('searchInput');
+            const searchIcon = document.getElementById('searchIcon');
+            const clearSearchBtn = document.getElementById('clearSearchBtn');
+            let allBands = [];
+
+            // Collect all bands from all stages
+            document.querySelectorAll('.schedule-row').forEach(row => {
+                const bandName = row.querySelector('td:nth-child(2)').textContent;
+                const time = row.querySelector('td:nth-child(1)').textContent;
+                const stage = row.closest('.stage-schedule').querySelector('h2').textContent;
+                allBands.push({
+                    name: bandName,
+                    time: time,
+                    stage: stage,
+                    element: row,
+                    stageContainer: row.closest('.stage-schedule')
+                });
+            });
+
+            function clearSearch() {
+                searchInput.value = '';
+                searchIcon.classList.remove('hidden');
+                clearSearchBtn.classList.add('hidden');
+
+                // Show all stages and bands
+                document.querySelectorAll('.stage-schedule').forEach(stage => {
+                    stage.classList.add('hidden');
+                    stage.querySelectorAll('.schedule-row').forEach(row => {
+                        row.style.display = '';
+                    });
+                });
+
+                // Show Vans Left Foot stage by default
+                document.querySelector('.stage-schedule[data-stage="vans-left"]').classList.remove('hidden');
+
+                // Reset pill states - activate Vans Left Foot
+                document.querySelectorAll('.stage-pill').forEach(p => p.classList.remove('active'));
+                document.querySelector('.stage-pill[data-stage="vans-left"]').classList.add('active');
+            }
+
+            searchInput.addEventListener('input', function () {
+                const searchTerm = this.value.toLowerCase().trim();
+
+                // Toggle search icon and clear button
+                if (searchTerm === '') {
+                    searchIcon.classList.remove('hidden');
+                    clearSearchBtn.classList.add('hidden');
+                    clearSearch();
+                } else {
+                    searchIcon.classList.add('hidden');
+                    clearSearchBtn.classList.remove('hidden');
+
+                    // Filter bands
+                    const matchingBands = allBands.filter(band =>
+                        band.name.toLowerCase().includes(searchTerm)
+                    );
+
+                    if (matchingBands.length > 0) {
+                        // Hide all stages first
+                        document.querySelectorAll('.stage-schedule').forEach(stage => {
+                            stage.classList.add('hidden');
+                            stage.querySelectorAll('.schedule-row').forEach(row => {
+                                row.style.display = 'none';
+                            });
+                        });
+
+                        // Show matching bands and their stages
+                        const stagesWithMatches = new Set();
+                        matchingBands.forEach(band => {
+                            band.element.style.display = '';
+                            band.stageContainer.classList.remove('hidden');
+                            stagesWithMatches.add(band.stageContainer.dataset.stage);
+                        });
+
+                        // Update pill states - remove active from all, no specific active for search
+                        document.querySelectorAll('.stage-pill').forEach(p => p.classList.remove('active'));
+                    } else {
+                        // No matches found - hide everything
+                        document.querySelectorAll('.stage-schedule').forEach(stage => {
+                            stage.classList.add('hidden');
+                        });
+                    }
+                }
+            });
+
+            // Clear search button functionality
+            clearSearchBtn.addEventListener('click', function () {
+                clearSearch();
+            });
+
+            // Band modal functionality
+            const modal = document.getElementById('bandModal');
+            const closeModal = document.getElementById('closeModal');
+
+            document.querySelectorAll('.schedule-row').forEach(row => {
+                row.addEventListener('click', function () {
+                    const bandKey = this.dataset.band;
+                    const bandInfo = bandData[bandKey];
+
+                    if (bandInfo) {
+                        document.getElementById('bandName').textContent = bandInfo.name;
+                        document.getElementById('bandBio').textContent = bandInfo.bio;
+
+                        // Create genre tags
+                        const genreContainer = document.getElementById('genreTags');
+                        genreContainer.innerHTML = ''; // Clear existing tags
+
+                        bandInfo.genres.forEach(genre => {
+                            const pill = document.createElement('span');
+                            pill.className = 'inline-block px-3 py-1 rounded-full text-sm font-medium bg-blue-500/30 text-blue-100 border border-blue-400/30';
+                            pill.textContent = genre;
+                            genreContainer.appendChild(pill);
+                        });
+
+                        modal.classList.remove('hidden');
+                    }
+                });
+            });
+
+            closeModal.addEventListener('click', function () {
+                modal.classList.add('hidden');
+            });
+
+            // Click outside modal to close
+            modal.addEventListener('click', function (e) {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                }
+            });
+        </script>
+    </div>
 </body>
+
 </html>
